@@ -22,13 +22,17 @@
       "type": "number"
     },
     "history": {
-      "type": [
-        "object"
-      ]
+      "type": ["object"]
     }
   },
   "validations": [],
-  "relations": {},
+  "relations": {
+    "account": {
+      "type": "belongsTo",
+      "model": "account",
+      "foreignKey": "userId"
+    }
+  },
   "acls": [],
   "methods": {}
 }

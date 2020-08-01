@@ -14,7 +14,13 @@
     }
   },
   "validations": [],
-  "relations": {},
+  "relations": {
+    "Profile": {
+      "type": "hasOne",
+      "model": "Profile",
+      "foreignKey": ""
+    }
+  },
   "acls": [],
   "methods": {}
 }
