@@ -32,13 +32,13 @@ boot(app, __dirname, function (err) {
   if (require.main === module) app.start();
 });
 
-app.models.User.afterRemote("create", (ctx, user, next) => {
-  console.log("New User is", user);
+app.models.account.afterRemote("create", (ctx, account, next) => {
+  console.log("New User is", account);
   app.models.Profile.create(
     {
-      first_name: user.username,
+      first_name: account.username,
       created_at: new Date(),
-      userId: user.id,
+      userId: account.id,
     },
     (err, result) => {
       if (!err && result) {
@@ -49,5 +49,4 @@ app.models.User.afterRemote("create", (ctx, user, next) => {
       next();
     }
   );
-  next();
 });

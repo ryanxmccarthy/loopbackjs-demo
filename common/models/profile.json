@@ -22,7 +22,9 @@
       "type": "number"
     },
     "history": {
-      "type": ["object"]
+      "type": [
+        "object"
+      ]
     }
   },
   "validations": [],
